@@ -28,20 +28,20 @@ afterUserLogined((uid) => {
 
 完成用户标识符的配置后并使其上线到正式环境后，等待带有用户标识符的数据上报，然后登陆 Raven Portal，打开指定的 Raven 仓库。点击左侧导航栏中的 “用户行为” - “指定用户”。
 
-![](/images/features-one-user1.png)
+![](/images/feature-one-user1.png)
 
 在“指定用户”界面中的搜索框输入需要跟踪的用户所对应的标识符，点击“搜索”按钮。
 
-![](/images/features-one-user2.png)
+![](/images/feature-one-user2.png)
 
 这个页面中可以浏览到该用户的一些基本信息：如最后操作时间、最后浏览页面、常用浏览器、常用操作系统、常驻地区等。如果查询该用户的行为信息是因为开发者需要通过该用户的信息来定位错误或问题缺失，这些信息就可以为其提供环境准备建议。
 
 在这些用户基本信息的下方，Raven 服务会提供该用户近二十次[会话](/wiki?id=%e4%bc%9a%e8%af%9d-session)的记录信息，表格中提供了该回话的会话编号、开始时间、持续时间已经备注（如在该回话中是否发生了报错）。
 
-![](/images/features-one-user3.png)
+![](/images/feature-one-user3.png)
 
 点击每一个会话表格栏左侧的展开按钮，可以查看该会话的一些更为详细的信息，如该次会话中页面浏览路径。
 
-![](/images/features-one-user4.png)
+![](/images/feature-one-user4.png)
 
 点击展开栏右侧的“查看会话详细”按钮，可以查看该回话的详细行为操作记录，详细请看 [用户详细操作行为](/features/session)。

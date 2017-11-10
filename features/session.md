@@ -70,4 +70,22 @@ Raven 服务为了能够更为精确地记录下终端用户在页面上的操�
 
 ![](/images/feature-session6.jpg)
 
-WIP
+#### 网络请求
+
+如今绝大部分的网站都已经使用 Ajax 技术以提高网站页面的交互体验，非常多的用户操作行为之后都会紧接着若干的网络请求。
+
+![](/images/feature-session7.png)
+
+Raven JavaScript SDK 会截取以下网络请求信息：
+
+* 请求方法
+* 请求路径（包括 Query Params）
+* 请求耗时（毫秒）
+
+默认情况下，Raven JavaScript SDK 不会截取 `POST` 和 `PUT` 网络请求的请求参数以及请求返回内容，但若有相关需求，可以通过 [自定义事件](/features/custom-action) 实现。
+
+#### 发生错误
+
+JavaScript 应用中时长会出现一些意料之外的错误发生（如数据格式、错误操作等），为了能够捕捉到这些报错，开发者可以通过 `window.onerror` 或自行进行开发的统一处理错误方案，Raven 服务可以帮助开发者将这些信息收集起来并上报以便统一处理，详细请见 [报错监控](/features/errors-monitor)。
+
+![](/images/feature-session8.png)
