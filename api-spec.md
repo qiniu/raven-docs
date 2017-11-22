@@ -190,7 +190,7 @@ Authorization: Qiniu <auth>
 
 **返回内容**
 
-请参考[获取指定仓库]()。
+请参考[获取指定仓库](#/api-spec?id=%e8%8e%b7%e5%8f%96%e6%8c%87%e5%ae%9a%e4%bb%93%e5%ba%93)。
 
 **示例**
 
