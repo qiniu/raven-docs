@@ -570,4 +570,143 @@ curl -G https://raven.qiniu.com/api/v1/repos/test-repo/user-groups \
 -H "Authorization=Qiniu auth_token"
 ```
 
+### 更新用户群信息
+
+* 请求方法： `PUT`
+* 请求地址： `/api/v1/repos/<RepoName>/user-groups/<GroupID>`
+
+**请求语法**
+
+```
+PUT /api/v1/repos/<RepoName>/user-groups/<GroupID>
+Content-Type: application/json
+Authorization: Qiniu <auth>
+{
+  "name": "<UpdateName>",
+  "value": "<UpdateValue>"
+}
+```
+
+**请求内容**
+
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| RepoName | `string` | 是 | 仓库名称 |
+| GroupID | `string` | 是 | 用户群 ID |
+| UpdateName | `string` | 否 | 需要更新的名字 |
+| UpdateValue | `string` | 否 | 需要更新的对应值 |
+
+**响应报文**
+
+```json
+{
+  "code": 200,
+  "data": {
+    "message": "OK",
+    "group": {
+      "_id": "<GroupID>",
+      "name": "<GroupName>",
+      "value": "<GroupValue>",
+      "path": "<Path>"
+    }
+  }
+}
+```
+
+**示例**
+
+```bash
+curl -X PUT https://raven.qiniu.com/api/v1/repos/test_group/user-groups/abcdefghijklmn \
+-H "Content-Type=application/json"
+-H "Authorization: Qiniu <auth>"
+-d '{
+  "name": "Update Group Name"
+}'
+```
+
+### 删除指定用户群
+
+* 请求方法： `DELETE`
+* 请求地址： `/api/v1/repos/<RepoName>/user-groups/<GroupID>`
+
+**请求语法**
+
+```
+DELETE /api/v1/repos/<RepoName>/user-groups/<GroupID>
+Authorization: Qiniu <auth>
+```
+
+**请求内容**
+
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| RepoName | `string` | 是 | 仓库名称 |
+| GroupID | `string` | 是 | 用户群 ID |
+
+**响应报文**
+
+```json
+{
+  "code": 200,
+  "data": {
+    "message": "OK"
+  }
+}
+```
+
+**示例**
+
+```bash
+curl -X DELETE https://raven.qiniu.com/api/v1/repos/test_group/user-groups/abcdefghijklmn \
+-H "Authorization: Qiniu <auth>"
+```
+
+### 更新指定仓库的用户群检索路径
+
+* 请求方法： `PUT`
+* 请求地址： `/api/v1/repos/<RepoName>/user-groups/path`
+
+**请求语法**
+
+```
+PUT /api/v1/repos/<RepoName>/user-groups/path
+Content-Type: application/json
+Authorization: Qiniu <auth>
+{
+  "path": "<Path>"
+}
+```
+
+**请求内容**
+
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| RepoName | `string` | 是 | 仓库名称 |
+| Path | `string` | 是 | 需要更新的检索路径 |
+
+**响应报文**
+
+```json
+{
+  "code": 200,
+  "data": {
+    "message": "OK"
+  }
+}
+```
+
+**示例**
+
+```bash
+curl -X PUT https://raven.qiniu.com/api/v1/repos/test_group/user-groups/path \
+-H "Content-Type: application/json" \
+-H "Authorization: Qiniu <auth>" \
+-d '{
+  "path": "extra.user_group"
+}'
+```
+
 
