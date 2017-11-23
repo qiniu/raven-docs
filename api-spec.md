@@ -54,7 +54,7 @@ Authorization: Qiniu <auth>
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| RepoName | `string` | 是 | 创建仓库的名称。可由字母，下划线开头，3 ~ 128 个字符长，可包含字母、数字、下划线。 |
+| RepoName | `string` | 是 | 创建仓库的名称。可由字母，中划线开头，3 ~ 128 个字符长，可包含字母、数字、中划线。 |
 
 **响应报文**
 
@@ -71,7 +71,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -X POST https://raven.qiniu.com/api/v1/repos/test_repo \
+curl -X POST https://raven.qiniu.com/api/v1/repos/test-repo \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Qiniu auth_token'
 ```
@@ -93,7 +93,7 @@ Authorization: Qiniu <auth>
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| RepoName | `string` | 是 | 仓库的名称。可由字母，下划线开头，3 ~ 128 个字符长，可包含字母、数字、下划线。 |
+| RepoName | `string` | 是 | 仓库的名称。可由字母，中划线开头，3 ~ 128 个字符长，可包含字母、数字、中划线。 |
 
 **响应报文**
 
@@ -127,7 +127,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -147,12 +147,12 @@ Authorization: Qiniu <auth>
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| RepoName | `string` | 是 | 仓库的名称。可由字母，下划线开头，3 ~ 128 个字符长，可包含字母、数字、下划线。 |
+| RepoName | `string` | 是 | 仓库的名称。可由字母，中划线开头，3 ~ 128 个字符长，可包含字母、数字、中划线。 |
 
 **示例**
 
 ```bash
-curl -X DELETE https://raven.qiniu.com/api/v1/repos/test_repo \
+curl -X DELETE https://raven.qiniu.com/api/v1/repos/test-repo \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -245,7 +245,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -X POST https://raven.qiniu.com/api/v1/repos/test_repo/collect \
+curl -X POST https://raven.qiniu.com/api/v1/repos/test-repo/collect \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Qiniu auth_token' \
 -d '[
@@ -344,7 +344,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo/actions?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo/actions?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -374,7 +374,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo/actions/url/%2Ftest?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo/actions/url/%2Ftest?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -402,7 +402,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo/actions/navigations?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo/actions/navigations?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -459,7 +459,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo/actions/sessions?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo/actions/sessions?startTime=2017-11-22T04%3A29%3A18.679Z&endTime=2017-11-22T10%3A29%3A18.681Z \
 -H 'Authorization: Qiniu auth_token'
 ```
 
@@ -566,7 +566,7 @@ Authorization: Qiniu <auth>
 **示例**
 
 ```bash
-curl -G https://raven.qiniu.com/api/v1/repos/test_repo/user-groups \
+curl -G https://raven.qiniu.com/api/v1/repos/test-repo/user-groups \
 -H "Authorization=Qiniu auth_token"
 ```
 
